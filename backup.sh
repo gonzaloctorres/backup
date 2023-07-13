@@ -139,7 +139,7 @@ function timediff() {
          if [ "$?" != 0 ]; then echo "$(date '+%Y-%m-%d %H:%M') - ERRO"; fi
       fi
 
-      echo "$(date '+%Y-%m-%d %H:%M') - Compactando configuracoes do apache"
+      echo "$(date '+%Y-%m-%d %H:%M') - Compactando configuracoes: ${DIR_CONF}"
       tar -czf ${BACKUP_DIR}/httpd_conf.tar.gz ${DIR_CONF}
       if [ "$?" != 0 ]; then echo "$(date '+%Y-%m-%d %H:%M') - ERRO"; fi
 
